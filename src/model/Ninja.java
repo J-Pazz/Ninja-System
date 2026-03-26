@@ -1,9 +1,9 @@
 package model;
 
 public class Ninja{
-    String nome;
-    int idade;
-    String hokage;
+    public String nome;
+    public int idade;
+    public String hokage;
 
     public Ninja(String nome, int idade, String hokage){
         this.nome = nome;
