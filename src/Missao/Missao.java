@@ -5,7 +5,7 @@ public class Missao {
     public int dificuldade; //de 1 a 10
     public boolean concluida;
 
-    public missao(String nome, int dificuldade, boolean concluida){
+    public Missao(String nome, int dificuldade, boolean concluida){
         this.nome = nome;
         this.dificuldade = dificuldade;
         this.concluida = concluida;

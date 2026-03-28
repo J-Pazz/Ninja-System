@@ -23,10 +23,10 @@ public class Main {
         int idade = sc.nextInt();
         sc.nextLine(); // limpar buffer
 
-        System.out.print("Você é hokage? (sim/nao): ");
-        String hokage = sc.nextLine();
+        System.out.print("Você é um Genin? (sim/nao): ");
+        String genin = sc.nextLine();
 
-        Ninja ninja = new Ninja(nome, idade, hokage);
+        Ninja ninja = new Ninja(nome, idade, genin);
 
         NinjaService ninjaService = new NinjaService();
 
@@ -74,7 +74,7 @@ public class Main {
         System.out.println("Pontos totais: " + pontosTotal);
 
         int nivelAtual = 1;
-        int novoNivel = nivelService.subirNivel(nivelAtual, pontosTotal);
+        int novoNivel = ninjaService.subirNivel(nivelAtual, pontosTotal);
 
         System.out.println("Seu nível atual era: " + nivelAtual);
         System.out.println("Seu novo nível é: " + novoNivel);

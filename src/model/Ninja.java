@@ -3,12 +3,12 @@ package model;
 public class Ninja{
     public String nome;
     public int idade;
-    public String hokage;
+    public String genin;
 
-    public Ninja(String nome, int idade, String hokage){
+    public Ninja(String nome, int idade, String genin){
         this.nome = nome;
         this.idade = idade;
-        this.hokage = hokage;
+        this.genin = genin;
 
     }
 

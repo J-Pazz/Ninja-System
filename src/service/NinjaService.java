@@ -5,8 +5,8 @@ import model.Ninja;
 public class NinjaService {
 
     public boolean isApto(Ninja ninja) {
-        return ninja.idade >= 15 && ninja.hokage != null &&
-                ninja.hokage.equalsIgnoreCase("sim");
+        return ninja.idade >= 15 && ninja.genin != null &&
+                ninja.genin.equalsIgnoreCase("sim");
     }
 
     public int subirNivel(int nivelAtual, int pontosTotal) {
@@ -14,7 +14,7 @@ public class NinjaService {
         return nivelAtual + niveisGanhos;
     }
 }
-}
+
 
 
 
