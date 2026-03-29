@@ -9,10 +9,6 @@ public class NinjaService {
                 ninja.genin.equalsIgnoreCase("sim");
     }
 
-    public int subirNivel(int nivelAtual, int pontosTotal) {
-        int niveisGanhos = pontosTotal / 50;
-        return nivelAtual + niveisGanhos;
-    }
 }
 
 

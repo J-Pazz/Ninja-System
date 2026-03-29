@@ -14,7 +14,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("===== TESTE NINJA =====");
+        System.out.println("===== AVALIADOR =====");
 
         System.out.print("Nome: ");
         String nome = sc.nextLine();
@@ -23,25 +23,19 @@ public class Main {
         int idade = sc.nextInt();
         sc.nextLine(); // limpar buffer
 
-        System.out.print("Você é um Genin? (sim/nao): ");
+        System.out.print("Qual o Rank dele(a)?: ");
         String genin = sc.nextLine();
 
         Ninja ninja = new Ninja(nome, idade, genin);
 
         NinjaService ninjaService = new NinjaService();
 
-        if (ninjaService.isApto(ninja)) {
-            System.out.println("\n" + nome + " está APTO para ser ninja! 🥷");
-        } else {
-            System.out.println("\n" + nome + " NÃO está apto.");
-        }
-
         // ===== SISTEMA DE MISSÕES =====
 
         NivelService missaoService = new NivelService();
         NivelService nivelService = new NivelService();
 
-        System.out.print("\nQuantas missões você fez? ");
+        System.out.print("\nQuantas missoes ele(a) fez? ");
         int qtdMissoes = sc.nextInt();
         sc.nextLine();
 
@@ -74,10 +68,16 @@ public class Main {
         System.out.println("Pontos totais: " + pontosTotal);
 
         int nivelAtual = 1;
-        int novoNivel = ninjaService.subirNivel(nivelAtual, pontosTotal);
+        int novoNivel = nivelService.subirNivel(nivelAtual, pontosTotal);
 
         System.out.println("Seu nível atual era: " + nivelAtual);
         System.out.println("Seu novo nível é: " + novoNivel);
+
+        String rank = nivelService.definirRank(pontosTotal);
+
+        System.out.println("\n===== RANK DO NINJA =====");
+        System.out.println("Pontos totais: " + pontosTotal);
+        System.out.println("Seu rank agora é: " + rank);
 
         sc.close();
     }

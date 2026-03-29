@@ -10,4 +10,23 @@ public class NivelService {
 
     }
   }
-}
+    public int subirNivel(int nivelAtual, int pontosTotal) {
+        int niveisGanhos = pontosTotal / 50;
+        return nivelAtual + niveisGanhos;
+    }
+
+    public String definirRank(int pontosTotal){
+        if (pontosTotal >= 500) {
+            return "Hokage";
+        } else if (pontosTotal >= 300) {
+            return "Jounin";
+        } else if (pontosTotal >= 150) {
+            return "Chunin";
+        } else if (pontosTotal >= 50) {
+            return "Genin";
+        } else {
+            return "Estudante";
+        }
+    }
+
+    }
