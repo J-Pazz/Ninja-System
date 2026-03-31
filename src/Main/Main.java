@@ -3,7 +3,7 @@ package Main;
 import java.util.Scanner;
 
 import model.Ninja;
-import Missao.Missao;
+import model.Missao;
 import service.NinjaService;
 import service.NivelService;
 
@@ -58,7 +58,7 @@ public class Main {
 
             Missao missao = new Missao(nomeMissao, dificuldade, concluida);
 
-            int pontos = missaoService.calcularPontos(missao);
+            int pontos = nivelService.calcularPontos(missao);
             pontosTotal += pontos;
 
             System.out.println("Pontos dessa missão: " + pontos);

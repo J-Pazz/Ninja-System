@@ -1,5 +1,5 @@
-package Missao;
-
+package model;
+//missao
 public class Missao {
     public String nome;
     public int dificuldade; //de 1 a 10
@@ -13,3 +13,4 @@ public class Missao {
     }
 
 }
+

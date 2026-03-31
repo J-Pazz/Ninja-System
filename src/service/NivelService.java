@@ -1,5 +1,5 @@
 package service;
-import Missao.Missao;
+import model.Missao;
 
 public class NivelService {
 
@@ -7,7 +7,7 @@ public class NivelService {
         if (missao.concluida){
             return missao.dificuldade * 10;
         }else { return 0;
-
+//esquema do nivel
     }
   }
     public int subirNivel(int nivelAtual, int pontosTotal) {
